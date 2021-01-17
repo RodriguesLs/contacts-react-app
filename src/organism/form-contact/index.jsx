@@ -1,22 +1,16 @@
 import React from 'react'
+import { FormContactForm } from './form-contact.styled.components'
+import { PhoneFieldsComponent } from '../../molecules/form-fields/phone-field.component'
+import { EmailFieldsComponent } from '../../molecules/form-fields/email-field.component'
+import { NameFieldsComponent } from '../../molecules/form-fields/name-field.component'
 
 const FormContactComponent = () => (
-  <form>
-      <div className="mb-3">
-        <label for="exampleInputEmail1" className="form-label">Email address</label>
-        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div className="mb-3">
-        <label for="exampleInputPassword1" className="form-label">Password</label>
-        <input type="password" className="form-control" id="exampleInputPassword1" />
-      </div>
-      <div className="mb-3 form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-        <label className="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" className="btn btn-primary">Submit</button>
-    </form>
+  <FormContactForm>
+    <NameFieldsComponent />
+    <EmailFieldsComponent />
+    <PhoneFieldsComponent />
+    <button type="submit" className="btn btn-primary mt-5">Submit</button>
+  </FormContactForm>
 );
 
 export default FormContactComponent;
