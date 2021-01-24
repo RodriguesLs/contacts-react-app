@@ -10,7 +10,7 @@ const FormContactComponent = () => {
   const [remark, setRemark] = useState('');
 
   const submit = async () => {
-    await fetch('http://localhost:3030/contacts',
+    await fetch('http://localhost:3001/contacts',
     {
       method: 'POST',
       headers: {
